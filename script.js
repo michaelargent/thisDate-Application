@@ -1,5 +1,6 @@
 'use strict';
 
+// MM-DD
 function getAstroPicOfDay(monthInput, dayInput) {
     monthInput = makeDouble(monthInput);
     dayInput = makeDouble(dayInput);
@@ -13,6 +14,7 @@ function getAstroPicOfDay(monthInput, dayInput) {
         });
 }
 
+// M-D
 function getWikiDay(monthInput, dayInput) {
     monthInput = stripLeadingZeros(monthInput);
     dayInput = stripLeadingZeros(dayInput);
@@ -33,7 +35,7 @@ function makeDouble(date) {
 }
 
 function stripLeadingZeros(date) {
-    date = date[0] === 0 ? date[1] : date;
+    date = date[0] === '0' ? date[1] : date;
     return date;
 }
 
@@ -52,14 +54,13 @@ function displayResultsWikiDay(responseJson) {
         });
         html += `</div>`
     }
-    $(".results").append(html);
-    $(".results").removeClass("hidden");
+    $(".results").html(html);
 }
 
 
 function displayResultsAstro(responseJson) {
     console.log(responseJson);
-    $(".results").prepend(`<h2>The cosomos looked like this on that day:</h2> 
+    $(".results").prepend(`<h1>The cosomos looked like this on that day:</h1> 
   <img src="${responseJson.url}" class="astroResults">`);
 }
 
@@ -73,6 +74,7 @@ function watchSubmit() {
         getAstroPicOfDay(monthInput, dayInput);
     });
 }
+
 
 $(function () {
     console.log('App loaded! Waiting for submit!');
