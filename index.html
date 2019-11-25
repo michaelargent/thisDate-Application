@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,37 +12,34 @@
 
 <body>
     <div class="container">
-        <div class=banner>
-            <h1>yourDate</h1>
-        </div>
-        <div class=salutation>
-            <p>Humanity has often asked, "Does everything happen for a reason?" "Does fate actually exist?" "Why are
-                some days considered unlucky?" "Does history always repeat itself?" To answer these questions, many turn
-                to the cosmos and have found that astral bodies havea profound impact on our daily lives.</p>
+        <div class = banner> <h1>yourDate</h1> </div>
+        <div class = salutation> 
+           <p>Humanity has often asked, "Does everything happen for a reason?" "Does fate actually exist?" "Why are some days considered unlucky?" "Does history always repeat itself?" To answer these questions, many turn to the cosmos and have found that astral bodies havea profound impact on our daily lives.</p> 
+           
+           <p> Enter a date below to discover monumental events that have occured on a particular day throughout history, as well as an astronomical picture of the cosomos that may have instigated it.</p>
+      </div>
 
-            <p> Enter a date below to discover monumental events that have occured on a particular day throughout
-                history, as well as an astronomical picture of the cosomos that may have instigated it.</p>
-        </div>
 
-        <form>
-            <label for="dateEntry">
-                <h3>Enter your date below in MM DD format</h2>
-            </label>
+      <form>
+          <label for="dateEntry"><h3>Enter your date below in MM DD format</h2></label>
+          <!-- TODO:: Remove values from both inputs --> 
+          <p class = "month"> Month: </p> 
+          <input type="number" id="monthInput" 
+           placeholder="MM" max="12" min="1" required/>
+            <p class = "day"> Day: </p> 
+          <input type="number" id="dayInput" 
+           placeholder="DD" max="31" min="1" required /> 
 
-            <p class="month"> Month: </p>
-            <input type="number" id="monthInput" placeholder="MM" max="12" min="1" required />
-            <p class="day"> Day: </p>
-            <input type="number" id="dayInput" placeholder="DD" max="31" min="1" required />
-            <input type="submit" value="SUBMIT">
+
+           <input type="submit" value="SUBMIT">
         </form>
-        
+
+
         <section class="results">
         </section>
-
+        
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
