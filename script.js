@@ -28,7 +28,6 @@ function getWikiDay(monthInput, dayInput) {
       });
   }
 
-
 function makeDouble(date){
   date = date.length == 1 ? "0" + date : date;
   return date;
@@ -39,9 +38,7 @@ function stripLeadingZeros(date){
   return date; 
 }
 
-
 function displayResultsWikiDay(responseJson) {
- // console.log(responseJson);
   let html = `<h1>This happened on that day:</h1>` ; 
   for(let i=0; i < 10; i++){
     html += `<div class = "resultsWikiDay">`
@@ -57,13 +54,11 @@ function displayResultsWikiDay(responseJson) {
   $(".results").html(html); 
 }
 
-
 function displayResultsAstro(responseJson){
   console.log(responseJson);
   $(".results").prepend(`<h1>The cosomos looked like this on that day:</h1> 
   <img src="${responseJson.url}" class="astroResults">`);
 }
-
 
 function watchSubmit() {
   $('form').submit(event => {
@@ -74,7 +69,6 @@ function watchSubmit() {
     getAstroPicOfDay(monthInput, dayInput);
   });
 }
-
 
 $(function() {
   console.log('App loaded! Waiting for submit!');
